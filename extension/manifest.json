@@ -1,0 +1,18 @@
+{
+  "name": "CForg Standings ",
+  "description": "This extension filters the standings for a given contest on Codeforces to show only active competitors of a specific country.",
+  "version": "1.0.1",
+  "manifest_version" : 2,
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["js/background.js"]
+    }
+  ],
+  
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "CForg Standings"
+  },
+  "permissions": ["tabs", "storage"]
+}
